@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script defer src-"https://pyscript.net/alpha/pyscript.js"></script>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"/>
+    <py-env>
+        - numpy
+        - matplotlib
+        - paths:
+            - ./main.py
+    </py-env>
 </head>
 <body>
-    
+    <py-script>
+        from datetime import datetime
+        from main import get_date
+
+        print("hello world")
+
+        print(f"Today is {datetime.now()}")
+        print(get_date())
+        
+    </py-script>
 </body>
 </html>
