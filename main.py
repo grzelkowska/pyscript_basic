@@ -1,4 +1,19 @@
-from datetime import datetime
+# from datetime import datetime
 
-def get_date():
-    return f"Today is {datetime.now()}"
+# def get_date():
+#     return f"Today is {datetime.now()}"
+
+
+import random
+
+number_input = Element("number_input")
+def play_game(*args):
+    user_guess = number_input.value
+    machine_guess = random.randint(1, 50)
+    if int(user_guess) == machine_guess:
+        result.element.innerText = "You win!"
+    else:
+        result.element.innerText = f"You lost! The machine chose {machine_guess}!"
+    number_input.clear()
+
+    
